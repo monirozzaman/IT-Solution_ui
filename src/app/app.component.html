@@ -1,21 +1,121 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<nav class="navbar navbar-dark text-dark bg-white justify-content-between border-bottom py-3  topNav">
+    <a class="navbar-brand text-dark">In Solution</a>
+    <ul class="list-inline ml-auto text-dark mb-0">
+        <li class="nav-item list-inline-item">
+            <a class="nav-link px-1" [routerLink]="['/registration']" routerLinkActive="active">registration</a>
+        </li>
+        <li class="nav-item list-inline-item">
+            <a class="nav-link px-1" [routerLink]="['/login']" routerLinkActive="active">log-in</a>
+        </li>
+    </ul>
 
-<router-outlet></router-outlet>
+</nav>
+
+
+
+
+<div class="container addsence py-2">
+    <div class="row">
+        <div class="col-12 col-md-10 m-auto">
+            <img src="/assets/images/add.PNG" class="img-fluid" style="height: 90px;width: 100%;">
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-lg-2 pr-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <a class="navbar-brand d-lg-none">More Options</a><br>
+                <button class="navbar-toggler hidden-sm-up" type="button"
+                    (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault"
+                    aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse sidebar" id="navbarsDefault">
+                    <ul class="nav flex-column mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link px-0" [routerLink]="['/home']" routerLinkActive="active">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0" [routerLink]="['/garments']" routerLinkActive="active">garments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0" [routerLink]="['/market']" routerLinkActive="active">market</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0" [routerLink]="['/rent']" routerLinkActive="active">rent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0" [routerLink]="['/index']" routerLinkActive="active">index</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0" [routerLink]="['/graphics']" routerLinkActive="active">graphics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0" [routerLink]="['/advertisement']" routerLinkActive="active">advertisement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0" [routerLink]="['/buy']" routerLinkActive="active">buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0" [routerLink]="['/jobs']" routerLinkActive="active">jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0" [routerLink]="['/news']" routerLinkActive="active">news</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+            <div class="text-left text-lg-center mt-2 mt-lg-3 pl-3 pl-lg-0 place">
+                <p class="mb-2 text-primary">ALL OF BANGLADESH</p>
+            </div>
+            <ul class="nav flex-lg-column sidebar">
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/dhaka']" routerLinkActive="active">Dhaka</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/chittagong']" routerLinkActive="active">Chittagong</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/syleth']" routerLinkActive="active">Syleth</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/khulna']" routerLinkActive="active">Khulna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/barishal']" routerLinkActive="active">Barishal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/mymensingh']" routerLinkActive="active">Mymensingh</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/rajshahi']" routerLinkActive="active">Rajshahi</a>
+                </li>
+            </ul>
+
+
+
+
+        </div>
+
+        <div class="col-12 col-lg-7 py">
+            <router-outlet></router-outlet>
+        </div>
+
+
+        <div class="col-12 col-lg-3 text-center">
+            <img src="/assets/images/add2.PNG" class="img-fluid">
+        </div>
+
+    </div>
+</div>
+
+
+<app-footer></app-footer>
